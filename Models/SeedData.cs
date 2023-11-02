@@ -33,7 +33,8 @@ namespace MegaDeskSite.Models
                         Width = 30,
                         Depth = 30,
                         Material = "laminate",
-                        RushOrderChoice = 7
+                        RushOrderChoice = 7,
+                        Price = 1090M
 
                     },
                     new DeskQuote
@@ -44,7 +45,8 @@ namespace MegaDeskSite.Models
                         Width = 25,
                         Depth = 30,
                         Material = "pine",
-                        RushOrderChoice = 3
+                        RushOrderChoice = 3,
+                        Price = 1090M
                     },
                     new DeskQuote
                     {
@@ -54,7 +56,8 @@ namespace MegaDeskSite.Models
                         Width = 25,
                         Depth = 25,
                         Material = "veneer",
-                        RushOrderChoice = 14
+                        RushOrderChoice = 14,
+                        Price = 1090M
                     },
                     new DeskQuote
                     {
@@ -64,8 +67,10 @@ namespace MegaDeskSite.Models
                         Width = 50,
                         Depth = 45,
                         Material = "Oak",
-                        RushOrderChoice = 3
+                        RushOrderChoice = 3,
+                        Price = 1090M
                     }
+
                 );
                 context.SaveChanges();
 
