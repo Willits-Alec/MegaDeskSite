@@ -36,7 +36,7 @@ namespace MegaDeskSite.Models
         [Display(Name ="Rush Order")]
         public int RushOrderChoice {  get; set; }
 
-
+        public decimal Price { get; set; }  
 
     }
 }

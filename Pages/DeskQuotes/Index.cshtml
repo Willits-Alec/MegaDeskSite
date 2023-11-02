@@ -45,6 +45,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].RushOrderChoice)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].Price)    
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -72,6 +75,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RushOrderChoice)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
