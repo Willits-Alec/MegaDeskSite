@@ -71,13 +71,13 @@ namespace MegaDeskSite.Pages.DeskQuotes
                 case "laminate":
                     materialPrice = 100;
                     break;
-                case "Oak":
+                case "oak":
                     materialPrice = 200;
                     break;
-                case "Rosewood":
+                case "rosewood":
                     materialPrice = 300;
                     break;
-                case "Veneer":
+                case "veneer":
                     materialPrice = 125;
                     break;
                 default:  //this is for pine
@@ -164,8 +164,14 @@ namespace MegaDeskSite.Pages.DeskQuotes
 
         public decimal GetDeskPrice()
         {
-            decimal deckPrice = BASEDESKPRICE + GetArea() + GetDrawersPrice() + GetMaterialPrice();
-            return deckPrice;
+            decimal deskPrice = BASEDESKPRICE + GetArea() + GetDrawersPrice() + GetMaterialPrice();
+
+            if (deskPrice <= 1000)
+            {
+                deskPrice -= GetArea();
+            }
+
+            return deskPrice;
         }
 
         public decimal GetTotalPrice()
