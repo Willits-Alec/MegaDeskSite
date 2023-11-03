@@ -1,22 +1,111 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+/* css for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+    .table th, .table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+/* css for the header and form */
+h1 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+form {
+    margin: 20px 0;
+}
+
+    /* css for the search input and button */
+    form input[type="text"] {
+        width: 300px;
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+
+    form input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+/* css for table rows and links */
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #e5e5e5;
+}
+
+.table a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* css for the header links */
+.table th a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* css for responsive design on smaller screens */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+    }
+
+        .table th, .table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .table th {
+            display: none;
+        }
+
+        .table td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 }
